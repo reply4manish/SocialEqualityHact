@@ -30,7 +30,7 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-md-12">
+		<!--<div class="col-md-12">
 			<h2>
 				Heading
 			</h2>
@@ -40,8 +40,46 @@
 			<p>
 				<a class="btn" href="#">View details »</a>
 			</p>
-		</div>
+		</div>-->
 	</div>
+	<style>
+	#contact{
+   		 display: none;
+   		 background: grey;
+   		 color: #FFF;
+   		 padding: 10px;
+		}
+	</style>
+	<center>
+
+
+	<div id="contact">
+   		question 1
+	</div>
+	<a href="#" id="toggle">Question 1</a>
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	<div class="row">
 		<div class="col-md-12">
 			<form role="form">
@@ -146,6 +184,7 @@
 			</form>
 		</div>
 	</div>
+</center>
 	<div class="row">
 		<div class="col-md-4">
 		</div>
@@ -160,4 +199,16 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
   </body>
+<script>
+$(function()
+{
+     $("a#toggle").click(function()
+     {
+         $("#contact").slideToggle();
+         return false;
+     }); 
+});
+
+
+</script>
 </html>
