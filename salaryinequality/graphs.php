@@ -40,17 +40,62 @@
 <?php 
 $dbconn3 = pg_connect("host=localhost dbname=hack user=s_hack password=s_hack");
 $alloccupations = pg_query($dbconn3, "SELECT occupation  FROM survey_data_years");
-$sal_men = pg_query($dbconn3, "select sum(y2010) as sal_sum, count(*) as total_no , sum(y2009)/count(*) as average_sal  from survey_data_years where occupation= E'1110 Legislators and senior government officials'and sex='men'");
+$sal_men_2009 = pg_query($dbconn3, "select sum(y2009) as sal_sum, count(*) as total_no , sum(y2009)/count(*) as average_sal  from survey_data_years where occupation= E'1110 Legislators and senior government officials'and sex='men'");
 
-$sal_women = pg_query($dbconn3, "select sum(y2010) as sal_sum, count(*) as total_no , sum(y2009)/count(*) as average_sal  from survey_data_years where occupation= E'1110 Legislators and senior government officials'and sex='women'");
+$sal_women_2009 = pg_query($dbconn3, "select sum(y2009) as sal_sum, count(*) as total_no , sum(y2009)/count(*) as average_sal  from survey_data_years where occupation= E'1110 Legislators and senior government officials'and sex='women'");
+
+$sal_men_2009 = pg_query($dbconn3, "select sum(y2009) as sal_sum, count(*) as total_no , sum(y2009)/count(*) as average_sal  from survey_data_years where occupation= E'1110 Legislators and senior government officials'and sex='men'");
+
+$sal_women_2010 = pg_query($dbconn3, "select sum(y2010) as sal_sum, count(*) as total_no , sum(y2010)/count(*) as average_sal  from survey_data_years where occupation= E'1110 Legislators and senior government officials'and sex='women'");
 
 
-$salmen = pg_fetch_all($sal_men); 
-$salwomen = pg_fetch_all($sal_women); 
+$sal_men_2010 = pg_query($dbconn3, "select sum(y2010) as sal_sum, count(*) as total_no , sum(y2010)/count(*) as average_sal  from survey_data_years where occupation= E'1110 Legislators and senior government officials'and sex='men'");
+
+$sal_women_2011 = pg_query($dbconn3, "select sum(y2011) as sal_sum, count(*) as total_no , sum(y2011)/count(*) as average_sal  from survey_data_years where occupation= E'1110 Legislators and senior government officials'and sex='women'");
+
+
+$sal_men_2011 = pg_query($dbconn3, "select sum(y2011) as sal_sum, count(*) as total_no , sum(y2011)/count(*) as average_sal  from survey_data_years where occupation= E'1110 Legislators and senior government officials'and sex='men'");
+
+$sal_women_2012 = pg_query($dbconn3, "select sum(y2012) as sal_sum, count(*) as total_no , sum(y2012)/count(*) as average_sal  from survey_data_years where occupation= E'1110 Legislators and senior government officials'and sex='women'");
+
+
+$sal_men_2012 = pg_query($dbconn3, "select sum(y2012) as sal_sum, count(*) as total_no , sum(y2012)/count(*) as average_sal  from survey_data_years where occupation= E'1110 Legislators and senior government officials'and sex='men'");
+
+$sal_women_2013 = pg_query($dbconn3, "select sum(y2013) as sal_sum, count(*) as total_no , sum(y2013)/count(*) as average_sal  from survey_data_years where occupation= E'1110 Legislators and senior government officials'and sex='women'");
+
+$sal_men_2013 = pg_query($dbconn3, "select sum(y2013) as sal_sum, count(*) as total_no , sum(y2013)/count(*) as average_sal  from survey_data_years where occupation= E'1110 Legislators and senior government officials'and sex='men'");
+
+
+
+$salmen_2009 = pg_fetch_all($sal_men_2009);
+$salwomen_2009 = pg_fetch_all($sal_women_2009); 
+$salmen_2010 = pg_fetch_all($sal_men_2010);
+$salwomen_2010 = pg_fetch_all($sal_women_2010); 
+$salmen_2011 = pg_fetch_all($sal_men_2011);
+$salwomen_2011 = pg_fetch_all($sal_women_2011); 
+$salmen_2012 = pg_fetch_all($sal_men_2012);
+$salwomen_2012 = pg_fetch_all($sal_women_2012); 
+$salmen_2013 = pg_fetch_all($sal_men_2013);
+$salwomen_2013 = pg_fetch_all($sal_women_2013); 
 
 //$dbconn3->close();
 print_r($salwomen);
 	print(Date("l F d, Y")); 
+
+$data_array_men = array();
+$data_array_women = array();
+$data_array_men[2009] = $salmen_2009[0]["average_sal"]; 
+$data_array_women[2009] = $salwomen_2009[0]["average_sal"]; 
+$data_array_men[2010] = $salmen_2010[0]["average_sal"]; 
+$data_array_women[2010] = $salwomen_2010[0]["average_sal"]; 
+$data_array_men[2011] = $salmen_2011[0]["average_sal"]; 
+$data_array_women[2011] = $salwomen_2011[0]["average_sal"]; 
+$data_array_men[2012] = $salmen_2012[0]["average_sal"]; 
+$data_array_women[2012] = $salwomen_2012[0]["average_sal"]; 
+$data_array_men[2013] = $salmen_2013[0]["average_sal"]; 
+$data_array_women[2013] = $salwomen_2013[0]["average_sal"]; 
+
+print_r($data_array_men);
 
 
 ?>
@@ -61,7 +106,8 @@ print_r($salwomen);
 <style>
 
 #container1 {
-    height: 400px; 
+    height: 400px;
+    top-margin: 100px;	 
     min-width: 310px; 
     max-width: 800px;
     margin: 0 auto;
@@ -69,7 +115,7 @@ print_r($salwomen);
 
 </style>
 
-<div id="container1" style="height: 400px"></div>
+<div id="container1" style="height: 400px;top-margin: 50px"></div>
 
 
 
@@ -90,19 +136,19 @@ $(function () {
             marginRight: 40
         },
 
-        title: {
-            text: 'Total fruit consumption, grouped by gender'
+        title: { 
+		text: 'Salary difference for men and women: Legislators and senior government officials'
         },
 
         xAxis: {
-            categories: ['Apples', 'Oranges', 'Pears', 'Grapes', 'Bananas']
+            categories: ['2009', '2010', '2011', '2012', '2013']
         },
 
         yAxis: {
-            allowDecimals: false,
+            allowDecimals: true,
             min: 0,
             title: {
-                text: 'Number of fruits'
+                text: 'Salary(SEK/month)'
             }
         },
 
@@ -119,22 +165,15 @@ $(function () {
         },
 
         series: [{
-            name: 'John',
-            data: [5, 3, 4, 7, 2],
+            name: 'Male',
+	    data: [<?php print $data_array_men[2009]; ?>,<?php print $data_array_men[2010]; ?>,<?php print $data_array_men[2011]; ?>,<?php print $data_array_men[2012]; ?>,<?php print $data_array_men[2013]; ?>],//[5, 3, 4, 7, 2],
             stack: 'male'
         }, {
-            name: 'Joe',
-            data: [3, 4, 4, 2, 5],
-            stack: 'male'
-        }, {
-            name: 'Jane',
-            data: [2, 5, 6, 2, 1],
-            stack: 'female'
-        }, {
-            name: 'Janet',
-            data: [3, 0, 4, 4, 3],
-            stack: 'female'
-        }]
+            name: 'Female',
+            data:[ <?php print $data_array_women[2009]; ?>, <?php print $data_array_women[2010]; ?>, <?php print $data_array_women[2011]; ?>, <?php print $data_array_women[2012]; ?>, <?php print $data_array_women[2013]; ?>], //[3, 4, 4, 2, 5],
+            stack: 'Female'
+        }
+        ]
     });
 });
 
