@@ -15,11 +15,14 @@ html, body {
   color:#fff;
   font-family: 'Montserrat', serif;
   overflow:hidden;
+  text-align:justify;
   }
   
  p{
 	   line-height:150%;
  }
+ 
+ a:hover{text-decoration:none;}
  
 input[type=button]{
 	font-size:18px;
@@ -30,6 +33,12 @@ input[type=button]{
 	padding-left:10px;
 	padding-right:10px;
     border: 2px solid #e7e7e7;
+}
+
+input[type=button]:hover{
+	font-size:18px;
+	background: #121212;
+	text-decoration:none;
 }
 
 /* padded section */
@@ -97,16 +106,12 @@ h3 {
 }
 
 h4 {
+  font-size: 12pt;
   font-weight: 700;
   margin: 0;
   margin-bottom:3em;
-<<<<<<< HEAD
   color:#777;
-  font-family: 'Martel', serif;
-=======
-  color:#aaa;
   font-family: 'Montserrat', serif;
->>>>>>> bcc508a26192eb306b8e5444e10cc5bb845c5198
 }
 
 
@@ -121,6 +126,66 @@ h4 {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+#question1 {
+    background: url(../images/graduation.jpeg) no-repeat center center fixed;
+    display: table;
+    height: 100%;
+    position: relative;
+    width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#question2 {
+    background: url(../images/gender.jpeg) no-repeat center center fixed;
+    display: table;
+    height: 100%;
+    position: relative;
+    width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#question3 {
+    background: url(../images/ethnicity.jpeg) no-repeat center center fixed;
+    display: table;
+    height: 100%;
+    position: relative;
+    width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#question4 {
+    background: url(../images/sector.jpeg) no-repeat center center fixed;
+    display: table;
+    height: 100%;
+    position: relative;
+    width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#question5 {
+    background: url(../images/salary2.jpeg) no-repeat center center fixed;
+    display: table;
+    height: 100%;
+    position: relative;
+    width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 #about {
@@ -169,13 +234,4 @@ footer .glyphicon {
 }
 footer .glyphicon:hover {
   color: #306d9f;
-<<<<<<< HEAD
-}
-
-.col-sm-6 {
-	width:48%;
-	padding-left:30px;
-	padding-right:30px;
-=======
->>>>>>> bcc508a26192eb306b8e5444e10cc5bb845c5198
 }
