@@ -32,6 +32,18 @@ input[type=button]{
     border: 2px solid #e7e7e7;
 }
 
+input[type=button]:hover{
+	background: #444;
+}
+
+input[type=text]{
+	height:40px;
+}
+
+a:hover {
+	text-decoration:none;
+}
+
 /* padded section */
 .pad-section {
   padding-top: 15%;
@@ -92,17 +104,17 @@ h2 {
 h3 {
   font-size: 13pt;
   font-weight: 700;
+  margin-bottom:1em;
   color:#ccc;
   font-family: 'Montserrat', serif;
 }
 
 h4 {
-  font-size: 12pt;
   font-weight: 700;
   margin: 0;
-  margin-bottom:3em;
-  color:#aaa;
+  margin-bottom:1em;
   font-family: 'Montserrat', serif;
+  color:#777;
 }
 
 
@@ -165,4 +177,13 @@ footer .glyphicon {
 }
 footer .glyphicon:hover {
   color: #306d9f;
+<<<<<<< HEAD
+}
+
+.col-sm-6 {
+	width:48%;
+	padding-left:30px;
+	padding-right:30px;
+=======
+>>>>>>> bcc508a26192eb306b8e5444e10cc5bb845c5198
 }
