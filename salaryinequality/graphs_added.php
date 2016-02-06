@@ -1,8 +1,13 @@
 <head>
+<head>
   <meta charset="utf-8" />
   <meta name="author" content="Script Tutorials" />
   <title>Placeholder.</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link href='https://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Martel' rel='stylesheet' type='text/css'>
 
   <!-- attach CSS styles -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -21,7 +26,8 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" style="background-color:#2e8ece ; font-family:Courier New; font-size:24px; font-weight:550; color:white"  href="#">placeholder.</a>
+        <a class="navbar-brand" style="font-family:'Righteous'; font-size:24px; font-weight:550; color:#666"  href="#">placeholder.</a>
+
       </div>
 
       <div class="collapse navbar-collapse" id="navbar-collapse-main">
