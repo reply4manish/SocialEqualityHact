@@ -15,11 +15,14 @@ html, body {
   color:#fff;
   font-family: 'Montserrat', serif;
   overflow:hidden;
+  text-align:justify;
   }
   
  p{
 	   line-height:150%;
  }
+ 
+ a:hover{text-decoration:none;}
  
 input[type=button]{
 	font-size:18px;
@@ -30,6 +33,12 @@ input[type=button]{
 	padding-left:10px;
 	padding-right:10px;
     border: 2px solid #e7e7e7;
+}
+
+input[type=button]:hover{
+	font-size:18px;
+	background: #121212;
+	text-decoration:none;
 }
 
 /* padded section */
@@ -101,7 +110,7 @@ h4 {
   font-weight: 700;
   margin: 0;
   margin-bottom:3em;
-  color:#aaa;
+  color:#777;
   font-family: 'Montserrat', serif;
 }
 
