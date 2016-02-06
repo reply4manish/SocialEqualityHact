@@ -38,7 +38,7 @@ html, body {
 
 /* additional sections */
 #home {
-  /*background: url(../images/home.jpeg) no-repeat center center fixed; */
+  background: url(../images/home.jpeg) no-repeat center center fixed; 
   display: table;
   height: 100%;
   position: relative;
