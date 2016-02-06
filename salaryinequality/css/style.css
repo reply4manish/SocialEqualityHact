@@ -10,11 +10,32 @@ This stylesheet and the associated (x)html may be modified in any way to fit you
 html, body {
   height: 100%;
   width: 100%;
+  background-color:#333;
+  background: url(../images/footer_lodyas.png) repeat center center fixed; 
+  color:#fff;
+  font-family: 'Montserrat', serif;
+  overflow:hidden;
+  }
+  
+ p{
+	   line-height:150%;
+ }
+ 
+input[type=button]{
+	font-size:18px;
+	background: none;
+	color:#fff;
+	margin:3px;
+	padding:5px;
+	padding-left:10px;
+	padding-right:10px;
+    border: 2px solid #e7e7e7;
 }
 
 /* padded section */
 .pad-section {
-  padding: 320px 0;
+  padding-top: 15%;
+  padding-bottom:15%;
   height: 100%;
   position: relative;
   width: 100%;
@@ -28,17 +49,66 @@ html, body {
   display: table-cell;
   text-align: center;
   vertical-align: middle;
+  padding-left:20%;
+  padding-right:20%;
 }
-.text-vcenter h1 {
-  font-size: 4.5em;
+
+.section-half-width{
+	max-width:50%;
+	margin-left:auto;
+	margin-right:auto;
+	padding:auto;
+	padding-right:auto;
+	overflow:auto;
+}
+
+.section-third-width{
+	max-width:30%;
+	margin-left:auto;
+	margin-right:auto;
+	padding:auto;
+	padding-right:auto;
+	overflow:auto;
+}
+
+.section-twothird-width{
+	max-width:70%;
+	margin-left:auto;
+	margin-right:auto;
+	padding:auto;
+	padding-right:auto;
+	overflow:auto;
+}
+
+h2 {
+  font-size: 4em;
   font-weight: 700;
   margin: 0;
-  padding: 0;
+  margin-bottom:1em;
+  color:#ededed;
+  font-family: 'Bree Serif', serif;
+  }
+
+h3 {
+  font-size: 13pt;
+  font-weight: 700;
+  color:#ccc;
+  font-family: 'Montserrat', serif;
 }
+
+h4 {
+  font-size: 12pt;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom:3em;
+  color:#aaa;
+  font-family: 'Montserrat', serif;
+}
+
 
 /* additional sections */
 #home {
-  background: url(../images/home.jpeg) no-repeat center center fixed; 
+/*  background: url(../images/home.jpeg) no-repeat center center fixed;  */
   display: table;
   height: 100%;
   position: relative;
@@ -69,7 +139,6 @@ html, body {
 }
 
 #information {
-  background: url(../images/estate.jpg) no-repeat center center fixed; 
   display: table;
   height: 800px;
   position: relative;
