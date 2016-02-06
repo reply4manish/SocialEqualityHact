@@ -100,6 +100,7 @@ h2 {
 h3 {
   font-size: 13pt;
   font-weight: 700;
+  margin-bottom:1em;
   color:#ccc;
   font-family: 'Montserrat', serif;
 }
@@ -107,6 +108,7 @@ h3 {
 h4 {
   font-weight: 700;
   margin: 0;
+  margin-bottom:1em;
   font-family: 'Montserrat', serif;
   color:#777;
 }
