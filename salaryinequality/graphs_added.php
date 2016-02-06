@@ -27,7 +27,7 @@
       <div class="collapse navbar-collapse" id="navbar-collapse-main">
         <ul class="nav navbar-nav navbar-right">
           <li><a href="index.html">Home</a></li>
-          <li><a href="graphs_added.php">trade workers</a></li>
+         <li><a href="graphs_finance.php">Finance Jobs</a></li>
          <!-- <li><a href="#statistics">Statistics</a></li>-->
 	  <!-- <li><a href="#services">Services</a></li>-->
 	  <!-- <li><a href="#information">Information</a></li>-->
@@ -41,30 +41,30 @@
 <?php 
 $dbconn3 = pg_connect("host=localhost dbname=hack user=s_hack password=s_hack");
 $alloccupations = pg_query($dbconn3, "SELECT occupation  FROM survey_data_years");
-$sal_men_2009 = pg_query($dbconn3, "select sum(y2009) as sal_sum, count(*) as total_no , sum(y2009)/count(*) as average_sal  from survey_data_years where occupation= E'1110 Legislators and senior government officials'and sex='men'");
+$sal_men_2009 = pg_query($dbconn3, "select sum(y2009) as sal_sum, count(*) as total_no , sum(y2009)/count(*) as average_sal  from survey_data_years where occupation= E'7129 Building frame and related trades workers not elsewhere classified'and sex='men'");
 
-$sal_women_2009 = pg_query($dbconn3, "select sum(y2009) as sal_sum, count(*) as total_no , sum(y2009)/count(*) as average_sal  from survey_data_years where occupation= E'1110 Legislators and senior government officials'and sex='women'");
+$sal_women_2009 = pg_query($dbconn3, "select sum(y2009) as sal_sum, count(*) as total_no , sum(y2009)/count(*) as average_sal  from survey_data_years where occupation= E'7129 Building frame and related trades workers not elsewhere classified'and sex='women'");
 
-$sal_men_2009 = pg_query($dbconn3, "select sum(y2009) as sal_sum, count(*) as total_no , sum(y2009)/count(*) as average_sal  from survey_data_years where occupation= E'1110 Legislators and senior government officials'and sex='men'");
+$sal_men_2009 = pg_query($dbconn3, "select sum(y2009) as sal_sum, count(*) as total_no , sum(y2009)/count(*) as average_sal  from survey_data_years where occupation= E'7129 Building frame and related trades workers not elsewhere classified'and sex='men'");
 
-$sal_women_2010 = pg_query($dbconn3, "select sum(y2010) as sal_sum, count(*) as total_no , sum(y2010)/count(*) as average_sal  from survey_data_years where occupation= E'1110 Legislators and senior government officials'and sex='women'");
-
-
-$sal_men_2010 = pg_query($dbconn3, "select sum(y2010) as sal_sum, count(*) as total_no , sum(y2010)/count(*) as average_sal  from survey_data_years where occupation= E'1110 Legislators and senior government officials'and sex='men'");
-
-$sal_women_2011 = pg_query($dbconn3, "select sum(y2011) as sal_sum, count(*) as total_no , sum(y2011)/count(*) as average_sal  from survey_data_years where occupation= E'1110 Legislators and senior government officials'and sex='women'");
+$sal_women_2010 = pg_query($dbconn3, "select sum(y2010) as sal_sum, count(*) as total_no , sum(y2010)/count(*) as average_sal  from survey_data_years where occupation=  E'7129 Building frame and related trades workers not elsewhere classified'and sex='women'");
 
 
-$sal_men_2011 = pg_query($dbconn3, "select sum(y2011) as sal_sum, count(*) as total_no , sum(y2011)/count(*) as average_sal  from survey_data_years where occupation= E'1110 Legislators and senior government officials'and sex='men'");
+$sal_men_2010 = pg_query($dbconn3, "select sum(y2010) as sal_sum, count(*) as total_no , sum(y2010)/count(*) as average_sal  from survey_data_years where occupation= E'7129 Building frame and related trades workers not elsewhere classified'and sex='men'");
 
-$sal_women_2012 = pg_query($dbconn3, "select sum(y2012) as sal_sum, count(*) as total_no , sum(y2012)/count(*) as average_sal  from survey_data_years where occupation= E'1110 Legislators and senior government officials'and sex='women'");
+$sal_women_2011 = pg_query($dbconn3, "select sum(y2011) as sal_sum, count(*) as total_no , sum(y2011)/count(*) as average_sal  from survey_data_years where occupation= E'7129 Building frame and related trades workers not elsewhere classified'and sex='women'");
 
 
-$sal_men_2012 = pg_query($dbconn3, "select sum(y2012) as sal_sum, count(*) as total_no , sum(y2012)/count(*) as average_sal  from survey_data_years where occupation= E'1110 Legislators and senior government officials'and sex='men'");
+$sal_men_2011 = pg_query($dbconn3, "select sum(y2011) as sal_sum, count(*) as total_no , sum(y2011)/count(*) as average_sal  from survey_data_years where occupation=  E'7129 Building frame and related trades workers not elsewhere classified'and sex='men'");
 
-$sal_women_2013 = pg_query($dbconn3, "select sum(y2013) as sal_sum, count(*) as total_no , sum(y2013)/count(*) as average_sal  from survey_data_years where occupation= E'1110 Legislators and senior government officials'and sex='women'");
+$sal_women_2012 = pg_query($dbconn3, "select sum(y2012) as sal_sum, count(*) as total_no , sum(y2012)/count(*) as average_sal  from survey_data_years where occupation= E'7129 Building frame and related trades workers not elsewhere classified'and sex='women'");
 
-$sal_men_2013 = pg_query($dbconn3, "select sum(y2013) as sal_sum, count(*) as total_no , sum(y2013)/count(*) as average_sal  from survey_data_years where occupation= E'1110 Legislators and senior government officials'and sex='men'");
+
+$sal_men_2012 = pg_query($dbconn3, "select sum(y2012) as sal_sum, count(*) as total_no , sum(y2012)/count(*) as average_sal  from survey_data_years where occupation= E'7129 Building frame and related trades workers not elsewhere classified'and sex='men'");
+
+$sal_women_2013 = pg_query($dbconn3, "select sum(y2013) as sal_sum, count(*) as total_no , sum(y2013)/count(*) as average_sal  from survey_data_years where occupation= E'7129 Building frame and related trades workers not elsewhere classified'and sex='women'");
+
+$sal_men_2013 = pg_query($dbconn3, "select sum(y2013) as sal_sum, count(*) as total_no , sum(y2013)/count(*) as average_sal  from survey_data_years where occupation= E'7129 Building frame and related trades workers not elsewhere classified'and sex='men'");
 
 
 
@@ -116,9 +116,8 @@ print_r($data_array_men);
 
 </style>
 
-<div class="row" id="container1" style="height: 70%;margin-top: 100px">
-</div>
- 
+<div id="container1" style="height: 70%;margin-top: 100px"></div>
+
 
 
 <script>
@@ -139,7 +138,7 @@ $(function () {
         },
 
         title: { 
-		text: 'Salary difference for men and women: Legislators and senior government officials'
+		text: 'Salary difference for men and women: Building frame and related trades workers '
         },
 
         xAxis: {
